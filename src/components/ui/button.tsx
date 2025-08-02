@@ -18,11 +18,17 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        // Celestial sacred variants
+        sacred: "bg-gradient-to-r from-celestial-gold to-celestial-gold-glow text-space-navy font-cinzel font-semibold shadow-divine hover:shadow-sacred hover:scale-105 transition-all duration-300",
+        divine: "bg-space-indigo/50 text-celestial-gold border border-celestial-gold/30 backdrop-blur-sm hover:bg-celestial-gold/10 hover:border-celestial-gold hover:shadow-divine transition-all duration-500",
+        cosmic: "bg-gradient-to-r from-space-navy via-space-indigo to-space-charcoal text-celestial-gold border border-celestial-gold/20 hover:border-celestial-gold/60 hover:shadow-sacred transition-all duration-500",
+        mystical: "bg-celestial-gold/10 text-celestial-gold border-2 border-celestial-gold/30 backdrop-blur-sm hover:bg-celestial-gold/20 hover:border-celestial-gold hover:shadow-divine transition-all duration-300"
       },
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
+        xl: "h-14 rounded-lg px-12 text-lg",
         icon: "h-10 w-10",
       },
     },
