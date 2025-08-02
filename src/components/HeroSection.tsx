@@ -52,7 +52,7 @@ const HeroSection = () => {
           <Button 
             variant="sacred" 
             size="xl"
-            className="animate-float-sacred"
+            className="hover:shadow-sacred hover:scale-105 transition-all duration-500"
             onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Book a Consultation
