@@ -4,7 +4,7 @@ import starsBackground from "@/assets/stars-background.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pb-8 md:pb-16">
       {/* Background layers */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
@@ -12,10 +12,10 @@ const HeroSection = () => {
       />
       <div className="absolute inset-0 bg-gradient-cosmic opacity-90" />
       
-      {/* Animated horoscope wheel - responsive sizing */}
+      {/* Animated horoscope wheel - oversized to prevent edge visibility */}
       <div className="absolute inset-0 flex items-center justify-center opacity-20">
         <div 
-          className="w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] md:w-[600px] md:h-[600px] lg:w-[700px] lg:h-[700px] xl:w-[800px] xl:h-[800px] bg-cover bg-center animate-horoscope-rotate bg-no-repeat"
+          className="w-[150vw] h-[150vw] max-w-[1200px] max-h-[1200px] min-w-[600px] min-h-[600px] bg-cover bg-center animate-horoscope-rotate bg-no-repeat"
           style={{ backgroundImage: `url(${horoscopeWheel})` }}
         />
       </div>
