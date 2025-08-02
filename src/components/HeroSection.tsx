@@ -7,15 +7,15 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background layers */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
         style={{ backgroundImage: `url(${starsBackground})` }}
       />
       <div className="absolute inset-0 bg-gradient-cosmic opacity-90" />
       
-      {/* Animated horoscope wheel */}
+      {/* Animated horoscope wheel - responsive sizing */}
       <div className="absolute inset-0 flex items-center justify-center opacity-20">
         <div 
-          className="w-[800px] h-[800px] bg-cover bg-center animate-horoscope-rotate"
+          className="w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] md:w-[600px] md:h-[600px] lg:w-[700px] lg:h-[700px] xl:w-[800px] xl:h-[800px] bg-cover bg-center animate-horoscope-rotate bg-no-repeat"
           style={{ backgroundImage: `url(${horoscopeWheel})` }}
         />
       </div>
@@ -31,19 +31,19 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <div className="animate-fade-in-up">
-          <h1 className="font-cinzel text-6xl md:text-8xl font-bold text-celestial-gold mb-6 animate-glow-pulse">
+          <h1 className="font-cinzel text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-celestial-gold mb-4 md:mb-6 animate-glow-pulse leading-tight">
             Shree Gajanan
           </h1>
-          <h2 className="font-cinzel text-4xl md:text-6xl font-semibold text-celestial-gold-glow mb-8">
+          <h2 className="font-cinzel text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-celestial-gold-glow mb-6 md:mb-8 leading-tight">
             Vastu Jyotish
           </h2>
         </div>
         
         <div className="animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-          <p className="font-inter text-xl md:text-2xl text-foreground mb-4 max-w-2xl mx-auto">
+          <p className="font-inter text-base sm:text-lg md:text-xl lg:text-2xl text-foreground mb-3 md:mb-4 max-w-2xl mx-auto px-2">
             Vedic Astrology • Vastu Shastra • Gemstone Consultation
           </p>
-          <p className="font-inter text-lg text-muted-foreground mb-12 max-w-3xl mx-auto">
+          <p className="font-inter text-sm sm:text-base md:text-lg text-muted-foreground mb-8 md:mb-12 max-w-3xl mx-auto px-4">
             Sacred wisdom meets modern guidance. Discover your divine path through ancient Vedic sciences.
           </p>
         </div>
