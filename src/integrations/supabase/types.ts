@@ -14,16 +14,233 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      admin_emails: {
+        Row: {
+          created_at: string
+          email: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+        }
+        Relationships: []
+      }
+      articles: {
+        Row: {
+          content: string
+          created_at: string
+          id: string
+          published: boolean
+          slug: string
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          content: string
+          created_at?: string
+          id?: string
+          published?: boolean
+          slug: string
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          content?: string
+          created_at?: string
+          id?: string
+          published?: boolean
+          slug?: string
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      birth_chart_submissions: {
+        Row: {
+          birth_date: string
+          birth_time: string | null
+          computed_sun_sign: Database["public"]["Enums"]["zodiac_sign"] | null
+          created_at: string
+          id: string
+          location: string | null
+          name: string | null
+          user_id: string | null
+        }
+        Insert: {
+          birth_date: string
+          birth_time?: string | null
+          computed_sun_sign?: Database["public"]["Enums"]["zodiac_sign"] | null
+          created_at?: string
+          id?: string
+          location?: string | null
+          name?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          birth_date?: string
+          birth_time?: string | null
+          computed_sun_sign?: Database["public"]["Enums"]["zodiac_sign"] | null
+          created_at?: string
+          id?: string
+          location?: string | null
+          name?: string | null
+          user_id?: string | null
+        }
+        Relationships: []
+      }
+      compatibility: {
+        Row: {
+          career_score: number | null
+          career_text: string | null
+          created_at: string
+          friendship_score: number | null
+          friendship_text: string | null
+          id: string
+          love_score: number | null
+          love_text: string | null
+          sign_a: Database["public"]["Enums"]["zodiac_sign"]
+          sign_b: Database["public"]["Enums"]["zodiac_sign"]
+          updated_at: string
+        }
+        Insert: {
+          career_score?: number | null
+          career_text?: string | null
+          created_at?: string
+          friendship_score?: number | null
+          friendship_text?: string | null
+          id?: string
+          love_score?: number | null
+          love_text?: string | null
+          sign_a: Database["public"]["Enums"]["zodiac_sign"]
+          sign_b: Database["public"]["Enums"]["zodiac_sign"]
+          updated_at?: string
+        }
+        Update: {
+          career_score?: number | null
+          career_text?: string | null
+          created_at?: string
+          friendship_score?: number | null
+          friendship_text?: string | null
+          id?: string
+          love_score?: number | null
+          love_text?: string | null
+          sign_a?: Database["public"]["Enums"]["zodiac_sign"]
+          sign_b?: Database["public"]["Enums"]["zodiac_sign"]
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      horoscopes: {
+        Row: {
+          career_text: string | null
+          created_at: string
+          date_end: string
+          date_start: string
+          friendship_text: string | null
+          general_text: string
+          id: string
+          love_text: string | null
+          period: Database["public"]["Enums"]["horoscope_period"]
+          sign: Database["public"]["Enums"]["zodiac_sign"]
+          updated_at: string
+        }
+        Insert: {
+          career_text?: string | null
+          created_at?: string
+          date_end: string
+          date_start: string
+          friendship_text?: string | null
+          general_text: string
+          id?: string
+          love_text?: string | null
+          period: Database["public"]["Enums"]["horoscope_period"]
+          sign: Database["public"]["Enums"]["zodiac_sign"]
+          updated_at?: string
+        }
+        Update: {
+          career_text?: string | null
+          created_at?: string
+          date_end?: string
+          date_start?: string
+          friendship_text?: string | null
+          general_text?: string
+          id?: string
+          love_text?: string | null
+          period?: Database["public"]["Enums"]["horoscope_period"]
+          sign?: Database["public"]["Enums"]["zodiac_sign"]
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      site_settings: {
+        Row: {
+          key: string
+          updated_at: string
+          value: Json
+        }
+        Insert: {
+          key: string
+          updated_at?: string
+          value: Json
+        }
+        Update: {
+          key?: string
+          updated_at?: string
+          value?: Json
+        }
+        Relationships: []
+      }
+      user_roles: {
+        Row: {
+          created_at: string
+          id: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      is_admin: {
+        Args: Record<PropertyKey, never>
+        Returns: boolean
+      }
     }
     Enums: {
-      [_ in never]: never
+      app_role: "admin" | "editor" | "user"
+      horoscope_period: "daily" | "weekly" | "monthly"
+      zodiac_sign:
+        | "aries"
+        | "taurus"
+        | "gemini"
+        | "cancer"
+        | "leo"
+        | "virgo"
+        | "libra"
+        | "scorpio"
+        | "sagittarius"
+        | "capricorn"
+        | "aquarius"
+        | "pisces"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +367,23 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      app_role: ["admin", "editor", "user"],
+      horoscope_period: ["daily", "weekly", "monthly"],
+      zodiac_sign: [
+        "aries",
+        "taurus",
+        "gemini",
+        "cancer",
+        "leo",
+        "virgo",
+        "libra",
+        "scorpio",
+        "sagittarius",
+        "capricorn",
+        "aquarius",
+        "pisces",
+      ],
+    },
   },
 } as const
