@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Clock, Youtube } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Youtube, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const ContactSection = () => {
@@ -108,6 +108,27 @@ const ContactSection = () => {
                 <span className="text-celestial-gold font-medium">By Appointment Only</span><br />
                 Call or WhatsApp to schedule your sacred consultation
               </p>
+            </div>
+
+            <div className="bg-space-indigo/40 backdrop-blur-sm rounded-xl p-6 border border-celestial-gold/20 hover:border-celestial-gold/40 transition-all duration-300 group">
+              <div className="flex items-center space-x-3 mb-3">
+                <div className="w-10 h-10 bg-celestial-gold/10 rounded-full flex items-center justify-center group-hover:bg-celestial-gold/20 transition-colors duration-300">
+                  <Instagram className="w-5 h-5 text-celestial-gold" />
+                </div>
+                <h3 className="font-cinzel text-lg font-semibold text-celestial-gold-glow">
+                  Instagram
+                </h3>
+              </div>
+              <p className="font-inter text-foreground/80 mb-3">
+                Follow our spiritual updates and pooja highlights.
+              </p>
+              <a
+                href="https://www.instagram.com/vaidik_sanskruti15?igsh=c2t3eXRzeGlyMGl4"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="mystical" size="sm">Visit Instagram</Button>
+              </a>
             </div>
           </div>
           

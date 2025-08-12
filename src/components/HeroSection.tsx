@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import horoscopeWheel from "@/assets/horoscope-wheel.jpg";
+const horoscopeWheel = "/lovable-uploads/a7d1eb7e-f48e-40a3-92bb-12247fdf5af8.png";
 import starsBackground from "@/assets/stars-background.jpg";
 
 const HeroSection = () => {

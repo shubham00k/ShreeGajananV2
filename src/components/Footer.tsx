@@ -1,4 +1,4 @@
-import { MessageCircle, Youtube, Home, Phone, Mail } from "lucide-react";
+import { MessageCircle, Youtube, Home, Phone, Mail, Instagram } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -43,6 +43,15 @@ const Footer = () => {
               >
                 <MessageCircle className="w-5 h-5 text-celestial-gold group-hover:animate-pulse" />
               </button>
+              <a
+                href="https://www.instagram.com/vaidik_sanskruti15?igsh=c2t3eXRzeGlyMGl4"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="w-10 h-10 bg-celestial-gold/10 hover:bg-celestial-gold/20 rounded-full flex items-center justify-center transition-all duration-300 hover:shadow-divine group"
+              >
+                <Instagram className="w-5 h-5 text-celestial-gold group-hover:animate-pulse" />
+              </a>
               <button className="w-10 h-10 bg-celestial-gold/10 hover:bg-celestial-gold/20 rounded-full flex items-center justify-center transition-all duration-300 hover:shadow-divine group">
                 <Youtube className="w-5 h-5 text-celestial-gold group-hover:animate-pulse" />
               </button>
