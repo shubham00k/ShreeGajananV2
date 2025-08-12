@@ -1,54 +1,35 @@
-import { Star, Sun, Moon, Home, Clock, Gem, ScrollText, Sparkles } from "lucide-react";
+import ganesh from "@/assets/services/ganesh-pujan.jpg";
+import pran from "@/assets/services/pran-pratishtha.jpg";
+import vivah from "@/assets/services/vivah-wedding.jpg";
+import satyanarayan from "@/assets/services/satyanarayan-puja.jpg";
+import kalsarp from "@/assets/services/kalsarp-shanti.jpg";
+import upanayan from "@/assets/services/upanayan-sanskar.jpg";
+import navgrah from "@/assets/services/navgrah-shanti.jpg";
+import nakshatra from "@/assets/services/nakshatra-shanti.jpg";
+import navchandi from "@/assets/services/navchandi-yadnya.jpg";
+import vastuShanti from "@/assets/services/vastu-shanti.jpg";
+import kalbhairav from "@/assets/services/kalbhairav-pujan.jpg";
+import rudra from "@/assets/services/rudra-abhishek.jpg";
+import ratna from "@/assets/services/ratna-sanskar.jpg";
+import vastuParikshan from "@/assets/services/vastu-parikshan.jpg";
+import patrika from "@/assets/services/patrika-nirakshan.jpg";
 
 const services = [
-  {
-    icon: ScrollText,
-    title: "Kundli Analysis",
-    description: "Detailed birth chart reading revealing your life's cosmic blueprint and destined path.",
-    gradient: "from-celestial-gold to-celestial-gold-glow"
-  },
-  {
-    icon: Star,
-    title: "Graha Dosh Nivaran",
-    description: "Sacred remedies to balance planetary influences and remove astrological obstacles.",
-    gradient: "from-space-indigo to-celestial-gold-dim"
-  },
-  {
-    icon: Sun,
-    title: "Navagraha Pooja",
-    description: "Divine rituals to appease the nine planets and enhance positive cosmic energies.",
-    gradient: "from-celestial-gold-dim to-celestial-gold"
-  },
-  {
-    icon: Home,
-    title: "Vastu Consultation",
-    description: "Harmonize your living and working spaces with ancient architectural wisdom.",
-    gradient: "from-space-charcoal to-celestial-gold-glow"
-  },
-  {
-    icon: Clock,
-    title: "Muhurat Selection",
-    description: "Perfect timing for life's important events based on cosmic alignments.",
-    gradient: "from-celestial-gold to-space-indigo"
-  },
-  {
-    icon: Moon,
-    title: "Rudrabhishek",
-    description: "Sacred Shiva worship rituals for spiritual purification and divine blessings.",
-    gradient: "from-space-indigo to-celestial-gold-dim"
-  },
-  {
-    icon: Sparkles,
-    title: "Online Horoscope",
-    description: "Comprehensive digital astrological readings accessible from anywhere.",
-    gradient: "from-celestial-gold-glow to-space-charcoal"
-  },
-  {
-    icon: Gem,
-    title: "Gemstone Recommendation",
-    description: "Personalized gemstone guidance to amplify positive planetary influences.",
-    gradient: "from-space-navy to-celestial-gold"
-  }
+  { image: ganesh, title: "Shree Ganesh Pujan", description: "Invoke Lord Ganesha's blessings for auspicious beginnings and success." },
+  { image: pran, title: "Pran Pratishtha", description: "Consecration of deity idols with sacred Vedic rites for divine presence." },
+  { image: vivah, title: "Vivah (Wedding Ceremony)", description: "Traditional Vedic marriage rituals for a blissful lifelong union." },
+  { image: satyanarayan, title: "Satyanarayan Puja", description: "Devotional puja for prosperity, harmony, and fulfillment of wishes." },
+  { image: kalsarp, title: "Kal Sarp Shanti", description: "Remedial rites to pacify Kal Sarp dosh and restore life balance." },
+  { image: upanayan, title: "Upanayan Sanskar", description: "Sacred thread ceremony marking the beginning of Vedic education." },
+  { image: navgrah, title: "Navgrah Shanti", description: "Balance planetary influences to invite positivity and overall growth." },
+  { image: nakshatra, title: "Nakshatra Shanti", description: "Pacify birth star influences for peace, protection, and well‑being." },
+  { image: navchandi, title: "Navchandi Yadnya", description: "Powerful Chandi homa for strength, protection, and divine grace." },
+  { image: vastuShanti, title: "Vastu Shanti", description: "Energize your home or office to align with cosmic harmony." },
+  { image: kalbhairav, title: "Kalbhairav Pujan", description: "Seek Lord Bhairav's protection, courage, and removal of obstacles." },
+  { image: rudra, title: "Rudra Abhishek", description: "Abhishek of Shiva for spiritual purification and blessings." },
+  { image: ratna, title: "Ratna Sanskar", description: "Energizing gemstones through mantras for beneficial effects." },
+  { image: vastuParikshan, title: "Vastu Parikshan", description: "Comprehensive Vastu inspection with practical corrective guidance." },
+  { image: patrika, title: "Patrika Nirakshan", description: "Detailed horoscope analysis for life guidance and remedies." },
 ];
 
 const ServicesSection = () => {
@@ -74,36 +55,28 @@ const ServicesSection = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => {
-            const IconComponent = service.icon;
             return (
               <div 
                 key={service.title}
-                className="group relative p-6 rounded-xl bg-space-indigo/40 backdrop-blur-sm border border-celestial-gold/20 hover:border-celestial-gold/60 transition-all duration-500 hover:shadow-sacred hover:transform hover:scale-105"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="group relative rounded-xl bg-space-indigo/40 backdrop-blur-sm border border-celestial-gold/20 hover:border-celestial-gold/60 transition-all duration-500 hover:shadow-sacred overflow-hidden"
+                style={{ animationDelay: `${index * 0.05}s` }}
               >
-                {/* Gradient overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 rounded-xl transition-opacity duration-500`} />
-                
-                {/* Content */}
-                <div className="relative z-10">
-                  <div className="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-full bg-celestial-gold/10 group-hover:bg-celestial-gold/20 transition-colors duration-300">
-                    <IconComponent className="w-7 h-7 text-celestial-gold group-hover:animate-pulse" />
-                  </div>
-                  
-                  <h3 className="font-cinzel text-xl font-semibold text-celestial-gold-glow mb-3 text-center">
+                <div className="aspect-[4/3] w-full overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={`${service.title} service thumbnail`}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="font-cinzel text-lg font-semibold text-celestial-gold-glow mb-2 text-center">
                     {service.title}
                   </h3>
-                  
                   <p className="font-inter text-foreground/80 text-center text-sm leading-relaxed">
                     {service.description}
                   </p>
                 </div>
-                
-                {/* Mystical corner decorations */}
-                <div className="absolute top-2 left-2 w-4 h-4 border-t border-l border-celestial-gold/30 group-hover:border-celestial-gold transition-colors duration-300" />
-                <div className="absolute top-2 right-2 w-4 h-4 border-t border-r border-celestial-gold/30 group-hover:border-celestial-gold transition-colors duration-300" />
-                <div className="absolute bottom-2 left-2 w-4 h-4 border-b border-l border-celestial-gold/30 group-hover:border-celestial-gold transition-colors duration-300" />
-                <div className="absolute bottom-2 right-2 w-4 h-4 border-b border-r border-celestial-gold/30 group-hover:border-celestial-gold transition-colors duration-300" />
               </div>
             );
           })}

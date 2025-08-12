@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -46,12 +46,12 @@ export default function BirthChart() {
         <p className="text-muted-foreground">Provide your details to request a birth chart reading.</p>
       </header>
 
-      <Card>
-        <CardHeader>
-          <CardTitle>Your Birth Details</CardTitle>
-          <CardDescription>We only need basics; time and location help with accuracy.</CardDescription>
-        </CardHeader>
-        <CardContent>
+      <section className="rounded-lg border bg-card text-card-foreground shadow-sm">
+        <div className="p-6">
+          <h2 className="text-2xl font-semibold leading-none tracking-tight">Your Birth Details</h2>
+          <p className="text-sm text-muted-foreground">We only need basics; time and location help with accuracy.</p>
+        </div>
+        <div className="p-6 pt-0">
           <form onSubmit={onSubmit} className="grid gap-4">
             <div className="grid gap-2">
               <Label htmlFor="name">Name</Label>
@@ -73,8 +73,8 @@ export default function BirthChart() {
             </div>
             <Button type="submit" disabled={submitting}>{submitting ? "Submitting..." : "Submit"}</Button>
           </form>
-        </CardContent>
-      </Card>
+        </div>
+      </section>
     </main>
   );
 }

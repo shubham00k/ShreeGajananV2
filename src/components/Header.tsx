@@ -19,42 +19,22 @@ const Header = () => {
           </li>
           <li>
             <NavLink
-              to="/horoscope"
+              to="/daily-horoscope"
               className={({ isActive }) =>
                 `px-2 py-1 rounded-md transition-colors ${isActive ? "bg-muted text-primary" : "hover:bg-muted/60"}`
               }
             >
-              Horoscope
+              Daily Horoscope
             </NavLink>
           </li>
           <li>
             <NavLink
-              to="/compatibility"
+              to="/kundali-report"
               className={({ isActive }) =>
                 `px-2 py-1 rounded-md transition-colors ${isActive ? "bg-muted text-primary" : "hover:bg-muted/60"}`
               }
             >
-              Compatibility
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/birth-chart"
-              className={({ isActive }) =>
-                `px-2 py-1 rounded-md transition-colors ${isActive ? "bg-muted text-primary" : "hover:bg-muted/60"}`
-              }
-            >
-              Birth Chart
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/articles"
-              className={({ isActive }) =>
-                `px-2 py-1 rounded-md transition-colors ${isActive ? "bg-muted text-primary" : "hover:bg-muted/60"}`
-              }
-            >
-              Articles
+              Kundali Report
             </NavLink>
           </li>
           <li>
