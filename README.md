@@ -1,73 +1,29 @@
-# Welcome to your Lovable project
+# Shree Gajanan Vastu Jyotish
 
-## Project info
+A modern astrology and pooja booking platform built with microservices architecture.
 
-**URL**: https://lovable.dev/projects/1b15f22b-584a-408a-bd12-4d3881fc6755
+## Project Overview
+- **Frontend:** React + Vite, styled with shadcn/ui.  
+- **Backend:** Node.js microservices:
+  - `booking-service.cjs` – Handles consultation bookings.  
+  - `server.cjs` – Handles daily horoscope updates (connected directly to Supabase).  
+- **Database:** Supabase (Postgres).  
 
-## How can I edit this code?
+## Dockerization
+- Both frontend and backend are containerized using Docker.  
+- Separate `.env` files for local development and Docker environment (`.env` for backend, `.env.docker` for frontend).  
+- Nginx used as a reverse proxy in the frontend container.  
 
-There are several ways of editing your application.
+## CI/CD
+- GitHub Actions workflow builds Docker images and pushes them to **GitHub Container Registry (GHCR)**.  
+- Setup ensures future deployments can be automated with container images.  
 
-**Use Lovable**
+## Microservices Architecture
+- Frontend communicates with backend services via environment variables.  
+- Each microservice runs in its own container, enabling isolated scaling and updates.  
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/1b15f22b-584a-408a-bd12-4d3881fc6755) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/1b15f22b-584a-408a-bd12-4d3881fc6755) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## Getting Started
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/shubham00k/ShreeGajananV2.git
+   cd ShreeGajananV2

@@ -1,0 +1,19 @@
+# Use Node.js LTS
+FROM node:20-alpine
+
+WORKDIR /app
+
+# Copy package.json & package-lock.json first
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy everything from the root folder
+COPY . .
+
+# Expose backend port
+EXPOSE 4000
+
+# Run booking service
+CMD ["node", "booking-service.cjs"]
